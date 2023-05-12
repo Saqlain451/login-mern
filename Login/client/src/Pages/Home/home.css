@@ -1,0 +1,25 @@
+.home{
+    background: url(../../../public/assets/home.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.home h1 { 
+    font-size: 4rem;
+    color: rgb(0, 255, 200);
+    text-transform: capitalize;
+    text-shadow: -3px 3px 3px rgba(0, 255, 117, 0.3);
+}
+
+.home-content button {
+    display: block;
+    width: 15rem;
+    margin: 2rem auto;
+    height: 4rem;
+}
+
+
+  
