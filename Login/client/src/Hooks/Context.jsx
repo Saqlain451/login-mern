@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import {useNavigate} from "react-router-dom"
 import {toast } from 'react-toastify';
 // create useContext
 const appContext = React.createContext();
@@ -78,7 +77,7 @@ const AppProvider = ({ children }) => {
     const { name, value } = e.target;
     setLogInp({ ...loginInp, [name]: value });
     // validation --->
-    if (loginInp.email.indexOf("@") == -1) {
+    if (loginInp.email.indexOf("@") === -1) {
       setIsloginerr({
         mail: true,
         pass: false,

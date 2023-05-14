@@ -1,7 +1,6 @@
 import express from "express";
 import users from "../model/schema.js";
 import bcrypt from "bcryptjs";
-import { task } from "../model/schema.js";
 
 const router = new express.Router();
 
@@ -53,45 +52,8 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-// task collection crud operation --->
 
-// create ---->
-
-router.post("/data", async (req, res) => {
-  const {title,subtitle} = req.body
-  try {
-    const doc = new task({title, subtitle});
-    const docInsert = await doc.save();
-    res.send(docInsert);
-  } catch (error) {
-    res.send(error);
-  }
-});
-
-
-router.get("/data",async(req, res)=>{
-  try {
-    const readDoc = await task.find();
-    console.log(readDoc);
-    res.send(readDoc);
-  } catch (error) {
-    res.send(error)
-  }
-})
-
-
-
-// delData();
-
-// router.delete("/id",async(req, res)=>{
-//   try {
-//     const del = await task.deleteOne({_id:req.body.id})
-//     res.send(del);
-//   } catch (error) {
-//     res.send(error);
-//   }
-//  })
-
+// update by using patch methode ----->
 
 router.patch("/update",async (req, res) =>{
   const {email,pass} = req.body;

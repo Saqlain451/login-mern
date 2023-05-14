@@ -5,7 +5,7 @@ import Button from "../../Component/Button/Button";
 import "./login.css";
 import { NavLink } from "react-router-dom";
 import { useGlobalHooke } from "../../Hooks/Context";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 const Login = () => {
   const { loginInp, loginChangeHandler, islogerr ,loginClickHandler} = useGlobalHooke();
   return (
