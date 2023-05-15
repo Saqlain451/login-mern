@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 
 const router = new express.Router();
 
-// register user using post methode---->
+// register user using post methode--->
 
 router.post("/register", async (req, res) => {
   const { name, email, pass, cpass } = req.body;
